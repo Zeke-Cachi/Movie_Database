@@ -18,14 +18,14 @@ const App = () => {
   const inputRef = useRef(null);
 
 
-  useEffect( () =>
-    async () => {
+  useEffect(() => {
+    const fetchMovies = async () => {
       let res = await fetch(movieApi);
-      let data = await res.json()
-      setMovies(data.results)
-
-    }
-  , [])
+      let data = await res.json();
+      setMovies(data.results);
+    };
+    fetchMovies();
+  }, []);
 
   let renderMovies = () => {
     return movies.length === 0 ? <h2>{message}</h2> : movies.map( (movie) => <MovieCard key={movie.id} movie={movie} />) 
