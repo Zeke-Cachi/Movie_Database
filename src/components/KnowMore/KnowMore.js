@@ -36,7 +36,7 @@ const KnowMore = ({movie, handleClose, image, imageError}) => {
     <>
 
       <div>
-        <div className="h-[42rem] w-[20rem] md:w-[40rem] lg:w-[50rem] bg-movieBlue fixed top-[4rem] lg:top-[6rem] 
+        <div className="h-[39rem] md:h-[42rem] w-[20rem] md:w-[40rem] lg:w-[50rem] bg-movieBlue fixed top-[6rem] 
         left-1/2 translate-x-[-50%] text-[color:white] rounded-xl">
           <FaTimes className="absolute top-4 right-4 text-white z-50 cursor-pointer" onClick={handleClose}/>
           <div className='mt-[3rem]'>
