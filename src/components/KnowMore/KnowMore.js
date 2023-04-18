@@ -36,8 +36,8 @@ const KnowMore = ({movie, handleClose, image, imageError}) => {
     <>
 
       <div>
-        <div className="min-h-[30rem] md:h-[42rem] w-[20rem] md:w-[40rem] lg:w-[50rem] bg-movieBlue fixed top-[6rem] 
-        left-1/2 translate-x-[-50%] text-[color:white] rounded-xl">
+        <div className={`min-h-[30rem] w-[20rem] md:w-[40rem] lg:w-[50rem] bg-movieBlue fixed ${overview.length >= 494 ? "top-[2rem]" : "top-[6rem]"} 
+        left-1/2 translate-x-[-50%] text-[color:white] rounded-xl`}>
           <FaTimes className="absolute top-4 right-4 text-white z-50 cursor-pointer" onClick={handleClose}/>
           <div className='mt-[3rem]'>
             <h2 className='text-2xl mb-5 md:text-4xl'>{title}</h2>
