@@ -46,7 +46,8 @@ export const MovieCard = ({movie}) => {
             </img>}
 
             <div className="h-1/4">
-                <h3 className="h-10 pt-2" style={{ fontSize: movie.title.length > 25 ? "1rem" : "1.5rem" }}>{movie.title}</h3>
+                <h3 className={`h-10 pt-2 ${movie.title.length > 25 && movie.title.length <= 40 ? "text-[1rem]" : 
+                movie.title.length > 40 ? "text-[.7rem]" : "text-[1.5rem]"} px-1`}>{movie.title}</h3>
                 <div className="flex justify-around items-center mt-4 pt-4">
                     <button className="bg-movieBlue h-10 w-32 rounded-xl text-[color:white] hover:bg-movieBlueHover" onClick={handleClick}>Know More</button>
                     <div className="flex flex-col justify-center items-center">
