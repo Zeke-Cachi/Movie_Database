@@ -72,12 +72,12 @@ export const MovieCard = ({movie}) => {
                     <KnowMore movie={movie} image={image} handleClose={handleClose} imageError={imageError} />
                     <div className="fixed w-full h-full bg-black z-40"></div>
                 </Transition>
-                {display && (
+                {/* {display && (
                     <div
                         className="fixed top-0 left-0 w-screen h-screen bg-black opacity-50 z-50"
                         onClick={handleClose}
                     ></div>
-                )}
+                )} */}
                 </div>
             </div>
         </div>

@@ -22,6 +22,8 @@ module.exports = {
       Poppins: ["Poppins", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+],
 }
 
