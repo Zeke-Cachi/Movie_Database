@@ -51,8 +51,9 @@ const KnowMore = ({movie, handleClose, image, imageError}) => {
     <>
 
       <div>
-        <div className={`${screenHeight <= 692 ? 'max-h-[20rem] w-[90%]' : null} bg-movieBlue fixed
-        top-1/2 translate-y-[-50%] left-1/2 translate-x-[-50%] text-[color:white] rounded-xl pb-[2rem] overflow-y-scroll scrollbar-thin`}>
+        <div className={`${screenHeight <= 692 ? 'max-h-[20rem]' : "max-h-[40rem]"} bg-movieBlue fixed
+        top-1/2 translate-y-[-50%] left-1/2 translate-x-[-50%] w-[90%] md:w-[45rem] lg:w-[50rem] xl:w-[55rem] xl:max-h-[45rem] 
+        text-[color:white] rounded-xl pb-[2rem] overflow-y-scroll scrollbar-thin`}>
 
           {/*CLOSE BUTTON*/}
           <FaTimes className="absolute top-4 right-4 text-white z-50 cursor-pointer" onClick={handleClose}/>
@@ -65,7 +66,7 @@ const KnowMore = ({movie, handleClose, image, imageError}) => {
             title.length > 40 ? 'text-xs md:text-sm' : 'text-2xl md:text-4xl mb-5'}`}>{title}</h2>
 
 
-            <div className='grid grid-cols-3 gap-[1rem] px-5 mb-5 md:mb-[2rem]'>
+            <div className='grid grid-cols-2 grid-row-3 sm:grid-row-1 sm:grid-cols-6 gap-[1rem] px-5 mb-5 md:mb-[2rem]'>
 
           {/* IMAGE POSTER */}
               {imageError ? 
@@ -73,14 +74,14 @@ const KnowMore = ({movie, handleClose, image, imageError}) => {
                     <BiErrorAlt className="h-[90%] w-[8rem] md:w-[12rem] lg:w-[15rem]"/>
                     <h4 className="ps-[0.3rem] md:ps-[2rem] lg:ps-[3.5rem] xl:ps-[3.5rem] text-sm italic">Image not Found</h4>
                 </div> : 
-                <img className={`${screenHeight <= 692 ? 'w-[5rem] md:w-[8rem]' : 'w-[8rem] md:w-[12rem] lg:w-[15rem]'}`} src={image} alt="Movie poster" />}
+                <img className={`${screenHeight <= 692 ? 'w-[5rem] md:w-[8rem]' : 'w-[7rem] md:w-[10rem] lg:w-[12rem]'}`} src={image} alt="Movie poster" />}
 
 
           {/* OVERVIEW */}
-                <p className={`${overview.length >= 494 ? "text-[.8rem]" : "text-md"} max-w-[70ch] pt-[2rem]`}>
+                <p className={`${overview.length >= 494 ? "text-[.8rem]" : "text-md"} col-span-2 sm:col-span-4 max-w-[70ch] pt-[2rem]`}>
                 {overview === "" ? "No description found" : overview}</p>
             
-                <div className='flex flex-col'>
+                <div className='flex flex-col col-start-2 row-start-1 sm:row-auto sm:col-auto'>
           {/* RELEASE DATE */}
                   <div className={`${screenHeight <= 692 ? 'my-2' : 'my-5'} flex flex-col`}>
                     <h6 className='md:text-xl'>Release Date</h6>
